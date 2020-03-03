@@ -17,7 +17,17 @@ class RestaruantList {
     }
     static async getById(id) {
         try {
-            const response = await db.any(`SELECT * FROM restaruant WHERE id = ${id}`);
+            const response = await db.any(`SELECT * FROM restaruant WHERE id = ${id};`);
+            return response;
+        }
+        catch (error) {
+            console.error('ERROR', error);
+            return error;
+        }
+    }
+    static async getRandom() {
+        try {
+            const response = await db.any(`SELECT name FROM restaruant ORDER BY RANDOM() LIMIT 1;`)
             return response;
         }
         catch (error) {
