@@ -1,6 +1,9 @@
-<h1>Test</h1>
+<h2>
+    Restaurant of the day:
+</h2>
+
 <ul>
-${dataArray.map(item =>
-    `<li><a href ='/restaruants/${item.id}'>${item.name} ${item.address}</a></li>`
-).join('')}
+    ${dataArray.map(item =>
+        `<li><a href ='/restaruants/${item.id}'>${item.name}</a></li>`
+    ).join('')}
 </ul>
