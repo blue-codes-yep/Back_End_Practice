@@ -1,20 +1,15 @@
 const express = require('express'),
-    router = express.Router()
+    router = express.Router(),
     restaruantModel = require('../models/restaruantModel');
 
-router.get('/:id?', async (req, res) => {
-    const { id } = req.params;
+router.get('/', async (req, res) => {
     let restaruantData = [];
+    restaruantData = await restaruantModel.getRandom();
 
-    if (!!id) {
-        restaruantData = await restaruantModel.getById(id);
-    } else {
-        restaruantData = await restaruantModel.getAll();
-    };
 
     res.render ('template', {
         locals: {
-            title: 'Resetaruants',
+            title: 'Restaruants',
             dataArray: restaruantData
         },
         partials : {
