@@ -1,0 +1,6 @@
+<H1> Restaurants around the block</H1>
+<ul>
+    ${dataArray.map(item =>
+        `<li><a href ='/allTheRestaruants/${item.id}'>${item.name}</a> Address: ${item.address}</li>`
+    ).join('')}
+</ul>
