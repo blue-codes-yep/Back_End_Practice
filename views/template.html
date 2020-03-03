@@ -1,11 +1,27 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Express Demo | ${title}</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        <h1 class="container">${title}</h1>
-        <main class="container">${partial}</main>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Restaruants</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.1/dist/css/foundation.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <a href= "/"><li class="menu-text">Restaurant Block</li></a>
+          <li>  <a href="#">Clostest Restaurants</a></li>
+          <li><a href="/all">All The Restaurants</a></li>
+          <li><a href="#">Extra</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- <h1 class="container">${title}</h1> -->
+    <main class="container">${partial}</main>
+  </body>
+</html>
